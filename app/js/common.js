@@ -27,7 +27,12 @@ $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
   	loop: true,
   	items: 1,
-  	//autoWidth:true
+  	autoplay: true,
+  	autoplayHoverPause: true,
+  	nav: true,
+  	smartSpeed: 1000
+
+  	//autoWidth: true
   });
 });
 
