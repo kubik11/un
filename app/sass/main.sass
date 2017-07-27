@@ -405,11 +405,85 @@ body
 						left: 0px
 						width: 50%
 						padding-left: 15px
+						font-size: 30px
+						color: #FFF
 				.owl-next
 						display: inline-block
 						text-align: right
 						right: 0px
 						width: 50%
 						padding-right: 15px
-					
+						font-size: 30px
+						color: #FFF
+
+// Our products section
+
+.our-products
+		padding: 60px 0px
+		.our-products-iner
+				padding-left: 15px
+				display: flex
+				align-items: center
+				width: 420px
+				.our-products-iner-line
+						height: 4px
+						width: 100%
+						background-color: #00a9e0
+						display: inline-block
+						border-radius: 3px 
+						&::before
+								content: ""
+								position: relative
+								width: 100%
+								height: 4px
+								background-color: #005eb8
+								top: -13px
+								left: 2px
+								display: inline-block
+								z-index: -2
+								border-radius: 3px
+
+				.h2
+						white-space: nowrap
+						margin: 0px 0px 0px 10px
+						//margin-left: 10px
+						display: inline-block
+						padding: 0px
+						text-transform: uppercase
+						text-shadow: 4px 4px 1px #005eb8
+						color: #0085ca
+						font-size: 48px
+// Product carousel
+//font-family: 'Gloria Hallelujah', cursive
+.products-carousel
+		position: relative
+		padding: 0px 15px
+		.carousel
+				padding: 0px 30px
+				.products-carousel-item
+						position: relative
+						//min-height: 400px
+						text-align: center
+						.wrap-img
+								min-height: 400px
+								display: flex
+								width: 100%
+								padding: 0px 100px
+								align-items: flex-end
+								a
+										display: inline-block
+										width: 100%
+										vertical-align: middle
+										
+										img
+												display: inline-block
+												width: 100%
+						p 
+								font-size: 30px
+								font-weight: bold
+								font-family: "DniPro"
+								color: #000
+						h2
+								font-size: 24px 
+								
 @import "media" // Всегда в конце

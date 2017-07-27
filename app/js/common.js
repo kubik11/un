@@ -30,11 +30,42 @@ $(document).ready(function(){
   	autoplay: true,
   	autoplayHoverPause: true,
   	nav: true,
-  	smartSpeed: 1000
-
+  	smartSpeed: 1000,
+  	navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>"
+,"<i class='fa fa-angle-right' aria-hidden='true'></i>"
+]
   	//autoWidth: true
   });
-});
 
+
+ });
+//Products carousel
+
+ $('.carousel').owlCarousel({
+ 	loop: true,
+  	items: 3,
+  	autoplay: true,
+  	autoplayHoverPause: true,
+  	nav: true,
+  	smartSpeed: 1000,
+  	autoWidth: true,
+  	navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>"
+,"<i class='fa fa-angle-right' aria-hidden='true'></i>"],
+	 responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+        },
+        1000:{
+            items:3,
+            nav:true,
+        }
+    }
+
+
+});
 
 });
