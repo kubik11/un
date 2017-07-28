@@ -187,13 +187,14 @@ body
 												transform: skewX(-5deg)
 												z-index: -1
 												transition: all 0.5s ease
+												top: 3px
 										&::after
 												content: ""
 												position: absolute
 												width: 100%
 												height: 90%
 												left: 5px
-												top: 5px
+												top: 6px
 												background-color: #005eb8
 												border-radius: 5px
 												transform: skewX(-5deg)
@@ -296,12 +297,13 @@ body
 								.h2
 										font-size: 60px
 										text-transform: uppercase
-										font-family: $default-font !important
+										//font-family: $default-font !important
 										color: #FFF
 										background: transparent url('../img/beigel.png') no-repeat -25px -145px
 										padding: 25px 110px 90px 15px 
 										margin: 0
 										line-height: 1
+										font-family: 'Gloria Hallelujah', cursive
 								p
 										margin: 20px 0px 
 										padding-left: 15px
@@ -362,6 +364,8 @@ body
 		padding: 25px 235px 90px 15px 
 		background: transparent url('../img/klik.png') no-repeat -185px -145px
 		color: #000
+.slider .owl-carousel .slider-child .slider-content >.h2
+		font-size: 58px
 .slider .owl-carousel .slider-child.slide2 .slider-content
 		a
 				&::before
@@ -453,6 +457,7 @@ body
 						text-shadow: 4px 4px 1px #005eb8
 						color: #0085ca
 						font-size: 48px
+						font-family: 'Gloria Hallelujah', cursive
 // Product carousel
 //font-family: 'Gloria Hallelujah', cursive
 .products-carousel
@@ -483,7 +488,153 @@ body
 								font-weight: bold
 								font-family: "DniPro"
 								color: #000
+								margin: 24px 0px 15px 0px
+								line-height: 1.2
 						h2
 								font-size: 24px 
-								
+								margin: 0px
+								font-weight: 300
+								display: inline-block
+								position: relative
+								line-height: 1.5
+								&::before
+										content: ""
+										position: absolute
+										display: inline-block
+										bottom: 0
+										left: 0
+										width: 0%
+										background-color: #333333
+										transition: all 0.5s ease
+										height: 4px
+										border-radius: 3px
+								&:hover
+										&::before
+												width: 100%
+												transition: all 0.5s ease
+.products-carousel
+		top: -80px
+		&::before
+				content: ""
+				position: absolute
+				top: 59%
+				left: -15px
+				width: 110%
+				height: 95px
+				background-color: #00a9e0
+				border-bottom: 1px solid #005eb8
+		.owl-nav
+				display: block
+				position: absolute
+				bottom: 50%
+				left: 0px
+				width: 100%
+				.owl-prev
+						display: inline-block
+						left: 0px
+						width: 50%
+						padding-left: 15px
+						font-size: 30px
+						color: #00a9e0
+				.owl-next
+						display: inline-block
+						text-align: right
+						right: 0px
+						width: 50%
+						padding-right: 15px
+						font-size: 30px
+						color: #00a9e0
+
+.footer	
+		position: relative
+		&::before
+				content: ""
+				height: 4px
+				position: absolute
+				top: -4px
+				left: 0px
+				width: 100%
+				background-color: #0d149d
+		&::after
+				content: ""
+				height: 5px
+				position: absolute
+				top: -9px
+				left: 0px
+				width: 100%
+				background-color: #f4f4f4
+		footer
+				padding: 10px 15px 
+				position: relative
+				&::before
+						content: ""
+						display: inline-block
+						height: 100%
+						vertical-align: middle
+				.footer-logo
+						display: inline-block
+						width: 47px
+						height: 52px
+						a
+								display: inline-block
+								width: 100%
+								height: 100%
+								img
+										width: 100%
+										height: auto
+				ul
+						margin: 0px
+						padding: 0px
+						display: inline-block
+						vertical-align: middle
+						//float: left
+						&::before
+								content: ""
+								display: inline-block
+								height: 100%
+								vertical-align: middle
+						li 
+								list-style: none
+								display: inline-block
+								vertical-align: middle
+								border-right: 1px solid #0d179d
+								color: #0d119b
+								a
+										text-decoration: none
+										font-size: 18px
+								&:nth-child(3)
+										border-right: none
+										a 
+												display: inline-block
+												padding-left: 13px
+								&:nth-child(2)
+										a 
+												display: inline-block
+												padding-left: 28px
+												padding-right: 13px
+								&:nth-child(1)
+										a 
+												display: inline-block
+												padding-left: 15px
+												padding-right: 28px
+												font-weight: bold
+												
+												line-height: 1.2
+				.button 
+						position: absolute
+						right: 15px
+						top: 50%
+						transform: translateY(-50%)
+						font-weight: bold
+						font-size: 18px
+						text-decoration: none
+						span
+								font-weight: 300
+								font-size: 18px
+						&:hover
+								color: #FFF
+						&::before
+								top: 2px
+						&::after
+								top: 6px
 @import "media" // Всегда в конце

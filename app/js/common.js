@@ -41,31 +41,34 @@ $(document).ready(function(){
  });
 //Products carousel
 
- $('.carousel').owlCarousel({
+ $('.owl-carousel.carousel').owlCarousel({
  	loop: true,
   	items: 3,
   	autoplay: true,
   	autoplayHoverPause: true,
-  	nav: true,
   	smartSpeed: 1000,
   	autoWidth: true,
   	navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>"
 ,"<i class='fa fa-angle-right' aria-hidden='true'></i>"],
-	 responsive:{
+	nav: true,
+	/*responsive:{
         0:{
-            items:1,
-            nav:true
+            items: 1,
+            nav: true
         },
         600:{
-            items:3,
+            items: 3,
+            nav: true,
         },
         1000:{
-            items:3,
-            nav:true,
+            items: 3,
+            nav: true,
         }
     }
+    */
 
 
 });
+$('.products-carousel .owl-nav').css('display','block');
 
 });
