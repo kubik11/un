@@ -44,31 +44,89 @@ $(document).ready(function(){
  $('.owl-carousel.carousel').owlCarousel({
  	loop: true,
   	items: 3,
-  	autoplay: true,
+  	//autoplay: true,
   	autoplayHoverPause: true,
   	smartSpeed: 1000,
-  	autoWidth: true,
+  	margin: 100,
+  	responsiveClass:true,
+  	//autoWidth: true,
   	navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>"
 ,"<i class='fa fa-angle-right' aria-hidden='true'></i>"],
 	nav: true,
-	/*responsive:{
+	responsive:{
         0:{
             items: 1,
             nav: true
         },
-        600:{
-            items: 3,
+        770:{
+            items: 2,
             nav: true,
         },
-        1000:{
+       992:{
+            items: 2,
+            nav: true,
+        },
+        1200:{
             items: 3,
             nav: true,
         }
     }
-    */
+    
 
 
 });
 $('.products-carousel .owl-nav').css('display','block');
 
 });
+
+//button click
+
+	$(document).ready(function(){
+		$('.hamburgerr').click(function(){
+			var burger = $(this).children();
+			if (!burger.hasClass('is-active')){
+			$(this).children().addClass('is-active');
+			}else{
+				$(this).children().removeClass('is-active');
+			}
+		});
+
+		$(window).resize(function(){
+			var width = $(window).width();
+			var elem = $('.hamburgerr');
+			//alert(width);
+			if (width > 990){
+				elem.css('display', 'none');
+			}else{
+				elem.css('display', 'inline-block');
+			}
+
+		$('.hamburger').click(function(){
+			mobileMenu();
+		});
+//if($(".one").hasClass('two')) ; // Использовать на наличие класса
+			function mobileMenu(){
+				var $div = $('<div></div>');
+					$div.attr({class: 'parent' });
+					$div.attr('data-position', -1000);
+				var $content = $('<p></p>').innerHTML = "hi dude";
+					$div.append($content);
+					$('body').append($div);
+
+					var $position = $('.parent').attr('data-position');
+					$position = +$position;
+				function moveToTheLeft(){			
+						while($position < 0){
+							$position += 10;
+							setTimeout(moveTo(), 100);
+						} 
+					}	
+			
+				function moveTo(){
+					var $parent = $('.parent');
+					$parent.css('right', $position + "px" );
+				}
+				moveToTheLeft();
+			}
+		});
+	});

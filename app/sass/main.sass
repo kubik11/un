@@ -34,7 +34,14 @@ body
 		font-family: $default-font
 		overflow-x: hidden
 		opacity: 1
-
+.parent
+	width: 80%
+	height: 100%
+	background: #fff
+	opacity: 0.5
+	position: absolute
+	top: 120px
+	right: -9999px
 .button
 		z-index: 2
 		color: #fff
@@ -121,6 +128,7 @@ body
 				padding: 	10px 0px
 				.header-left-side
 						height: 100%
+						display: inline-block
 						&::before	
 								content	: ""
 								display	: inline-block	
@@ -150,6 +158,8 @@ body
 				.header-right-side
 						height: 100%
 						text-align: right
+						display: inline-block
+						float: right
 						.hamburger
 								display: none
 						&::before
@@ -359,7 +369,8 @@ body
 
 
 // Styling of second slide
-
+.slider .owl-carousel .slider-child .slider-content > .h2
+		white-space: nowrap
 .slider .owl-carousel .slider-child.slide2 .slider-content .h2
 		padding: 25px 235px 90px 15px 
 		background: transparent url('../img/klik.png') no-repeat -185px -145px
@@ -460,26 +471,30 @@ body
 						font-family: 'Gloria Hallelujah', cursive
 // Product carousel
 //font-family: 'Gloria Hallelujah', cursive
+
 .products-carousel
 		position: relative
 		padding: 0px 15px
 		.carousel
-				padding: 0px 30px
+				padding: 0px 60px
 				.products-carousel-item
 						position: relative
 						//min-height: 400px
 						text-align: center
 						.wrap-img
 								min-height: 400px
-								display: flex
+								//display: flex
 								width: 100%
-								padding: 0px 100px
-								align-items: flex-end
+								//padding: 0px 100px
+								//align-items: flex-end
+								position: relative
 								a
 										display: inline-block
-										width: 100%
+										//width: 100%
 										vertical-align: middle
-										
+										position: absolute
+										bottom: 14px
+										left: 0px
 										img
 												display: inline-block
 												width: 100%
@@ -637,4 +652,18 @@ body
 								top: 2px
 						&::after
 								top: 6px
+
+
+//button
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before 
+		width: 69px
+		height: 9px
+		background-color: #0085ca
+.hamburger-inner::before 
+		top: -15px
+.hamburger-inner::after 
+		bottom: -15px
+.hamburger-box
+		width: 69px
 @import "media" // Всегда в конце

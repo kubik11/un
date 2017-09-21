@@ -5,19 +5,64 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
-
-
+	.header header .header-left-side .h2
+		margin: 0px 0px 0px 20px
+		width: 240px
+	.header header .header-left-side .logo
+		padding-right: 20px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
 
 
 /* Small Devices, Tablets */
+@media only screen and (max-width : 990px)
+	.header header .header-left-side .h2 
+		display: none
+	.header header .header-right-side .top-nav ul li:first-child
+		display: none
+	.header header .header-right-side .top-nav ul li:nth-child(2)
+		display: none
+	.header header .header-right-side .top-nav ul li:nth-child(3) 
+		padding-left: 20px
+	.header header .header-right-side
+		float: none
+
+
+	.hamburgerr
+		display: inline-block
+		float: right
+		margin-top: 17px
+		//margin-right: 20px
+	.header header .header-right-side .hamburger
+		display: block	
 @media only screen and (max-width : 768px)
 	/**/
-
-
+	.products-carousel .carousel .products-carousel-item .wrap-img a 
+		display: inline-block
+		vertical-align: middle
+		position: absolute
+		bottom: 14px
+		left: 50%
+		transform: translateX(-50%)
+	.products-carousel .carousel .products-carousel-item .wrap-img 
+		min-height: 400px
+		width: 100%
+		position: relative
+		height: 400px
+	.slider .owl-carousel .slider-child .slider-content .h2
+		background-size: 100%
+		white-space: nowrap
+		font-size: 50px
+	
 /* Extra Small Devices, Phones */
+@media only screen and (max-width : 750px)
+	.footer footer .button
+		display: block
+		position: static
+		text-align: center
+		width: 80%
+		margin: 40px auto 0px
 @media only screen and (max-width : 480px)
 	/**/
 
@@ -25,8 +70,16 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
-
-
+@media only screen and (max-width : 540px)
+	.slider .owl-carousel .slider-child .slider-content > .h2 
+		font-size: 46px
+		background-size: 100%
+	.products-carousel .carousel .products-carousel-item .wrap-img a
+		width: 100%
+	.slider .owl-carousel .slider-child.slide3 .slider-content .h2 
+		background: transparent url(../img/telma.png) no-repeat -185px -190px
+	.slider .owl-carousel .slider-child.slide2 .slider-content .h2
+		background: transparent url(../img/klik.png) no-repeat -185px -190px
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
